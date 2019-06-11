@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/colors.scss";
+
+.alert-error{
+    color: red;
+}
+
+
+button {
+    padding: 10px;
+}
+
+[full] {
+    width: 100%;
+}
+
+input[type=email],
+input[type=text],
+input[type=number],
+input[type=password] {
+  padding: 12px 15px;
+  display: inline-block;  
+  box-sizing: border-box;
+}

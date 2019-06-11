@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="imgcontainer">
+    <!-- <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar"> -->
+    <img src="https://www.w3schools.com/w3css/img_avatar3.png" alt="Avatar" class="avatar">
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="input-field">
+      <label>E-Mail:
+        <input type="email" formControlName="email" full>
+      </label>
+      <div class="alert-error" *ngIf="formControls.email.errors" ></div>
+    </div>
+
+    <div class="input-field">
+      <label>
+        Senha:
+        <input type="password" formControlName="password" full>
+      </label>
+    </div>
+
+    <button type="submit" full>Login</button>
+
+  </form>
+</div>
+
+
+<div class="container">
+  <button full (click)="btnRegister()">Cadastre-se</button>
+</div>
