@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Wrapper": {
+    "Idendity": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,9 +15,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:build",
           "options": {
-            "outputPath": "dist/Wrapper",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Wrapper:build"
+            "browserTarget": "Idendity:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Wrapper:build:production"
+              "browserTarget": "Idendity:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Wrapper:build"
+            "browserTarget": "Idendity:build"
           }
         },
         "test": {
@@ -109,15 +109,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Wrapper:serve"
+            "devServerTarget": "Idendity:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Wrapper:serve:production"
+              "devServerTarget": "Idendity:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Wrapper"
+  "defaultProject": "Idendity"
 }

@@ -1,0 +1,28 @@
+  <div class="imgcontainer">
+    <img src="https://www.w3schools.com/w3css/img_avatar3.png" alt="Avatar" class="avatar">
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="input-field">
+      <label>E-Mail:
+        <input type="email" formControlName="email" full>
+      </label>
+      <div class="alert-error" *ngIf="submitted && formControls.email.errors">Necessário informar e-mail</div>
+    </div>
+
+    <div class="input-field">
+      <label>
+        Senha:
+        <input type="password" formControlName="password" full>
+      </label>
+      <div class="alert-error" *ngIf="submitted && formControls.password.errors">Necessário informar senha</div>
+    </div>
+
+    <button type="submit" [disabled]="loading" full>Login</button>
+
+  </form>
+
+  <div class="margin-top-15">
+    <button full [disabled]="loading" (click)="btnRegister()">Cadastre-se</button>
+  </div>
