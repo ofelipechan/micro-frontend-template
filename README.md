@@ -11,10 +11,10 @@
 $ npm install
 ```
 
-### Build User Micro Frontend and start
+### Build Identity Micro Frontend and start
 
 ```bash
-$ cd User
+$ cd identity
 ```
 
 ```bash
